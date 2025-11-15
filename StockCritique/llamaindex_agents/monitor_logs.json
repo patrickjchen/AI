@@ -462,3 +462,40 @@ LLM improvement error for sec: Connection error.
 {"timestamp": "2025-09-28T09:40:16.551685", "agent": "BankerAIWorkflow", "status": "AGENTS_EXECUTED", "details": "Success: 5, Failed: 0"}
 {"timestamp": "2025-09-28T09:40:21.816593", "agent": "BankerAIWorkflow", "status": "COMPLETED", "details": "Total time: 13.51s"}
 {"timestamp": "2025-09-28T09:40:21.818099", "agent": "BankerAIWorkflow", "status": "SUCCESS", "details": "Query processed in 30.50s with 6 results"}
+{"timestamp": "2025-11-15T11:35:47.129848", "agent": "BankerAIWorkflow", "error": "Failed to initialize FinanceAgent: Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?", "context": {}}
+{"timestamp": "2025-11-15T11:35:48.736610", "agent": "YahooAgentEnhanced", "status": "LOADED", "details": "Vector index loaded from storage"}
+{"timestamp": "2025-11-15T11:35:48.741318", "agent": "BankerAIWorkflow", "error": "Failed to initialize RedditAgent: No module named 'asyncpraw'", "context": {}}
+{"timestamp": "2025-11-15T11:35:48.746641", "agent": "BankerAIWorkflow", "status": "INITIALIZED", "details": "Loaded 3 agents"}
+{"timestamp": "2025-11-15T11:35:48.750383", "agent": "BankerAIWorkflow", "status": "QUERY_ANALYZED", "details": "{\"query\": \"comment on TSLA\", \"companies\": [], \"tickers\": [], \"is_finance\": true, \"selected_agents\": [\"FinanceAgent\", \"RedditAgent\", \"GeneralAgent\"]}"}
+{"timestamp": "2025-11-15T11:35:48.750954", "agent": "BankerAIWorkflow", "error": "FinanceAgent execution failed: Agent FinanceAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:35:48.751031", "agent": "BankerAIWorkflow", "error": "RedditAgent execution failed: Agent RedditAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:35:49.917560", "agent": "GeneralAgent", "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************UygA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}", "context": {"query": "comment on TSLA"}}
+{"timestamp": "2025-11-15T11:35:49.917796", "agent": "BankerAIWorkflow", "status": "AGENTS_EXECUTED", "details": "Success: 1, Failed: 2"}
+Comprehensive summary generation error: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************UygA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+{"timestamp": "2025-11-15T11:35:50.078413", "agent": "BankerAIWorkflow", "status": "COMPLETED", "details": "Total time: 1.17s"}
+{"timestamp": "2025-11-15T11:35:50.083294", "agent": "BankerAIWorkflow", "status": "SUCCESS", "details": "Query processed in 12.42s with 2 results"}
+{"timestamp": "2025-11-15T11:37:39.094334", "agent": "BankerAIWorkflow", "error": "Failed to initialize FinanceAgent: Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?", "context": {}}
+{"timestamp": "2025-11-15T11:37:40.609887", "agent": "YahooAgentEnhanced", "status": "LOADED", "details": "Vector index loaded from storage"}
+{"timestamp": "2025-11-15T11:37:40.611106", "agent": "BankerAIWorkflow", "error": "Failed to initialize RedditAgent: No module named 'asyncpraw'", "context": {}}
+{"timestamp": "2025-11-15T11:37:40.612846", "agent": "BankerAIWorkflow", "status": "INITIALIZED", "details": "Loaded 3 agents"}
+{"timestamp": "2025-11-15T11:37:40.614936", "agent": "BankerAIWorkflow", "status": "QUERY_ANALYZED", "details": "{\"query\": \"on TSLA stock\", \"companies\": [], \"tickers\": [], \"is_finance\": true, \"selected_agents\": [\"FinanceAgent\", \"RedditAgent\", \"GeneralAgent\"]}"}
+{"timestamp": "2025-11-15T11:37:40.615573", "agent": "BankerAIWorkflow", "error": "FinanceAgent execution failed: Agent FinanceAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:37:40.615655", "agent": "BankerAIWorkflow", "error": "RedditAgent execution failed: Agent RedditAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:37:43.652283", "agent": "GeneralAgent", "status": "SUCCESS", "details": "Processed general query: on TSLA stock..."}
+{"timestamp": "2025-11-15T11:37:43.652524", "agent": "BankerAIWorkflow", "status": "AGENTS_EXECUTED", "details": "Success: 1, Failed: 2"}
+{"timestamp": "2025-11-15T11:37:47.424614", "agent": "BankerAIWorkflow", "status": "COMPLETED", "details": "Total time: 3.04s"}
+{"timestamp": "2025-11-15T11:37:47.427345", "agent": "BankerAIWorkflow", "status": "SUCCESS", "details": "Query processed in 16.30s with 2 results"}
+{"timestamp": "2025-11-15T11:39:39.712735", "agent": "BankerAIWorkflow", "error": "Failed to initialize FinanceAgent: Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?", "context": {}}
+{"timestamp": "2025-11-15T11:39:41.206496", "agent": "YahooAgentEnhanced", "status": "LOADED", "details": "Vector index loaded from storage"}
+{"timestamp": "2025-11-15T11:39:41.207732", "agent": "BankerAIWorkflow", "error": "Failed to initialize RedditAgent: No module named 'asyncpraw'", "context": {}}
+{"timestamp": "2025-11-15T11:39:41.209297", "agent": "BankerAIWorkflow", "status": "INITIALIZED", "details": "Loaded 3 agents"}
+{"timestamp": "2025-11-15T11:39:41.211279", "agent": "BankerAIWorkflow", "status": "QUERY_ANALYZED", "details": "{\"query\": \"tell me about Tesla stock\", \"companies\": [\"tesla\"], \"tickers\": [\"TSLA\"], \"is_finance\": true, \"selected_agents\": [\"FinanceAgent\", \"YahooAgent\", \"SECAgent\", \"RedditAgent\", \"GeneralAgent\"]}"}
+{"timestamp": "2025-11-15T11:39:41.211870", "agent": "BankerAIWorkflow", "error": "FinanceAgent execution failed: Agent FinanceAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:39:44.404427", "agent": "YahooAgentEnhanced", "error": "Error querying data: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (17,) + inhomogeneous part.", "context": {}}
+{"timestamp": "2025-11-15T11:39:44.404592", "agent": "YahooAgentEnhanced", "status": "SUCCESS", "details": "Processed data for 1 tickers"}
+{"timestamp": "2025-11-15T11:39:49.763867", "agent": "SECAgent", "status": "SUCCESS", "details": "Processed SEC data for 1 companies"}
+{"timestamp": "2025-11-15T11:39:49.769273", "agent": "BankerAIWorkflow", "error": "RedditAgent execution failed: Agent RedditAgent not found in initialized agents", "context": {}}
+{"timestamp": "2025-11-15T11:39:51.419010", "agent": "GeneralAgent", "status": "SUCCESS", "details": "Processed general query: tell me about Tesla stock..."}
+{"timestamp": "2025-11-15T11:39:51.419273", "agent": "BankerAIWorkflow", "status": "AGENTS_EXECUTED", "details": "Success: 3, Failed: 2"}
+{"timestamp": "2025-11-15T11:39:57.346764", "agent": "BankerAIWorkflow", "status": "COMPLETED", "details": "Total time: 10.21s"}
+{"timestamp": "2025-11-15T11:39:57.353232", "agent": "BankerAIWorkflow", "status": "SUCCESS", "details": "Query processed in 24.03s with 4 results"}
