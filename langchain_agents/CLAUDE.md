@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-BankerAI is a FastAPI-based multi-agent system that answers financial queries by intelligently routing user questions to specialized agents. The system uses semantic similarity to classify queries and dispatches them to appropriate agents for finance-related research, stock analysis, social media sentiment, and general queries.
+FinanceAgents is a FastAPI-based multi-agent system that answers financial queries by intelligently routing user questions to specialized agents. The system uses semantic similarity to classify queries and dispatches them to appropriate agents for finance-related research, stock analysis, social media sentiment, and general queries.
 
 ## Architecture
 
@@ -84,8 +84,8 @@ The system uses a custom Message Context Protocol (MCP) for agent communication:
 python main.py
 
 # Using Docker
-docker build -t bankerai-backend .
-docker run -p 8000:8000 bankerai-backend
+docker build -t financeagents-backend .
+docker run -p 8000:8000 financeagents-backend
 
 # Using uvicorn directly
 uvicorn main:app --host 0.0.0.0 --port 8000

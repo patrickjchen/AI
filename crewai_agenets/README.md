@@ -1,4 +1,4 @@
-# BankerAI Backend
+# FinanceAgents Backend
 
 A FastAPI-based financial analysis system that uses specialized AI agents to provide comprehensive insights from multiple data sources including financial documents, SEC filings, real-time stock data, and social media sentiment.
 
@@ -84,10 +84,10 @@ This starts:
 **Using Docker:**
 ```bash
 # Build the image
-docker build -t bankerai-backend .
+docker build -t financeagents-backend .
 
 # Run the container
-docker run -p 8000:8000 bankerai-backend
+docker run -p 8000:8000 financeagents-backend
 ```
 
 ## Usage

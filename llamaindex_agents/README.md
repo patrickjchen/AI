@@ -1,10 +1,10 @@
-# StockCritique - LlamaIndex Implementation
+# FinanceAgents - LlamaIndex Implementation
 
-StockCritique is an AI-powered financial analysis system that provides comprehensive investment insights by combining data from multiple sources. Built with the LlamaIndex framework, it orchestrates specialized AI agents to deliver in-depth stock analysis, regulatory insights, and market sentiment—all in one query.
+FinanceAgents is an AI-powered financial analysis system that provides comprehensive investment insights by combining data from multiple sources. Built with the LlamaIndex framework, it orchestrates specialized AI agents to deliver in-depth stock analysis, regulatory insights, and market sentiment—all in one query.
 
-## 🎯 What Does StockCritique Do?
+## 🎯 What Does FinanceAgents Do?
 
-When you ask a financial question, StockCritique automatically:
+When you ask a financial question, FinanceAgents automatically:
 
 1. **Analyzes your query** to extract company names and stock tickers
 2. **Selects relevant agents** based on your question type
@@ -22,7 +22,7 @@ All in seconds, giving you:
 
 ### Workflow-Based Design
 
-StockCritique uses a **LlamaIndex Workflow** architecture for robust, parallel execution:
+FinanceAgents uses a **LlamaIndex Workflow** architecture for robust, parallel execution:
 
 ```
 User Query
@@ -109,7 +109,7 @@ Each agent focuses on a specific data source:
 
 ## 🚀 Usage
 
-### Starting StockCritique
+### Starting FinanceAgents
 
 Run the system with environment variables:
 
@@ -120,12 +120,12 @@ env $(cat ./.env) python main.py
 You'll see:
 
 ```
-Starting StockCritique - LlamaIndex Implementation...
+Starting FinanceAgents - LlamaIndex Implementation...
 INFO:     Started server process [15258]
 INFO:     Waiting for application startup.
 
 ============================================================
-StockCritique - Workflow Implementation
+FinanceAgents - Workflow Implementation
 Interactive CLI Started - Powered by LlamaIndex Workflow
 ============================================================
 
@@ -146,7 +146,7 @@ Enter your financial question (or 'quit' to exit): tell me about Tesla stock
 **Output:**
 ```
 ============================================================
-🚀 Starting StockCritique Workflow Analysis
+🚀 Starting FinanceAgents Workflow Analysis
 📝 Query: tell me about Tesla stock
 🕐 Start Time: 11:39:33
 ============================================================
@@ -154,7 +154,7 @@ Enter your financial question (or 'quit' to exit): tell me about Tesla stock
 [YahooAgentEnhanced] Analyzing query: tell me about Tesla stock
 
 ============================================================
-🎯 StockCritique Workflow Results
+🎯 FinanceAgents Workflow Results
 ⏱️ Total Execution Time: 24.03 seconds
 📊 Status: success
 ============================================================
@@ -224,7 +224,7 @@ Type `quit`, `exit`, or `q` to stop the CLI.
 
 ## 🌐 API Access
 
-StockCritique also runs as a REST API server on port 8001.
+FinanceAgents also runs as a REST API server on port 8001.
 
 ### Endpoints
 
@@ -266,18 +266,18 @@ curl http://localhost:8001/agents
 
 ### Supported Companies
 
-StockCritique includes built-in mappings for major companies:
+FinanceAgents includes built-in mappings for major companies:
 - Apple (AAPL), Microsoft (MSFT), Google/Alphabet (GOOGL)
 - Amazon (AMZN), Meta/Facebook (META), Tesla (TSLA)
 - NVIDIA (NVDA), Netflix (NFLX), Intel (INTC), IBM (IBM)
 
 **Add new companies:**
 1. Add PDF documents to `./raw_data/` (format: `company-year.pdf`)
-2. Update `company_ticker_map` in `bankerai_workflow.py`
+2. Update `company_ticker_map` in `financeagents_workflow.py`
 
 ### Agent Selection
 
-StockCritique automatically selects agents based on query type:
+FinanceAgents automatically selects agents based on query type:
 
 | Query Type | Agents Activated |
 |------------|------------------|
@@ -350,7 +350,7 @@ python test_yahoo_enhanced.py
 ```
 llamaindex_agents/
 ├── main.py                    # FastAPI server & CLI entry point
-├── bankerai_workflow.py       # Main workflow orchestration
+├── financeagents_workflow.py       # Main workflow orchestration
 ├── schemas.py                 # MCP protocol definitions
 ├── monitor.py                 # Logging and health monitoring
 │
@@ -440,7 +440,7 @@ All agent outputs are:
 
 ## 🤝 Contributing
 
-To extend StockCritique:
+To extend FinanceAgents:
 
 1. **Add a new agent**: Implement `run(mcp_request)` method returning `MCPResponse`
 2. **Add new data sources**: Integrate APIs in respective agent files

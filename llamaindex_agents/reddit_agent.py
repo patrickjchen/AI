@@ -16,7 +16,7 @@ class RedditAgent:
         return asyncpraw.Reddit(
             client_id=os.getenv("REDDIT_CLIENT_ID"),
             client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
-            user_agent="BankerAI-LlamaIndex/1.0"
+            user_agent="FinanceAgents-LlamaIndex/1.0"
         )
 
     async def _get_recent_posts(self, query: str, since: datetime = None) -> List:

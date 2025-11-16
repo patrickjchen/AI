@@ -1,5 +1,5 @@
 """
-BankerAI Workflow Design using LlamaIndex Workflow (AgentWorkFlow)
+FinanceAgents Workflow Design using LlamaIndex Workflow (AgentWorkFlow)
 
 This demonstrates how to restructure the current router-based system
 into a more robust workflow-based architecture.
@@ -38,9 +38,9 @@ class SummaryGeneratedEvent(Event):
     summary: str
     complete_results: Dict[str, Any]
 
-class BankerAIWorkflow(Workflow):
+class FinanceAgentsWorkflow(Workflow):
     """
-    BankerAI Financial Analysis Workflow
+    FinanceAgents Financial Analysis Workflow
 
     Flow:
     1. Analyze query (extract companies, determine agents)
@@ -286,11 +286,11 @@ class BankerAIWorkflow(Workflow):
         })
 
 # Example usage function
-async def run_bankerai_workflow(user_query: str) -> Dict[str, Any]:
+async def run_financeagents_workflow(user_query: str) -> Dict[str, Any]:
     """
-    Run the BankerAI workflow for a given query
+    Run the FinanceAgents workflow for a given query
     """
-    workflow = BankerAIWorkflow(timeout=300)  # 5 minute timeout
+    workflow = FinanceAgentsWorkflow(timeout=300)  # 5 minute timeout
 
     result = await workflow.run(user_query=user_query)
     return result

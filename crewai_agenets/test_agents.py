@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script for BankerAI agents
+Test script for FinanceAgents agents
 """
 
 print("Testing Agent Imports")

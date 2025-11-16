@@ -4,15 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-BankerAI is a FastAPI-based backend that provides financial analysis through multiple specialized agents. The system routes user queries to different agents based on query content and company mentions, then aggregates responses to provide comprehensive financial insights.
+FinanceAgents is a FastAPI-based backend that provides financial analysis through multiple specialized agents. The system routes user queries to different agents based on query content and company mentions, then aggregates responses to provide comprehensive financial insights.
 
 ## Common Commands
 
 ### Development
 - Start the server: `python main.py` (runs both FastAPI server on port 8000 and CLI interface)
 - Install dependencies: `pip install -r requirements.txt`
-- Docker build: `docker build -t bankerai-backend .`
-- Docker run: `docker run -p 8000:8000 bankerai-backend`
+- Docker build: `docker build -t financeagents-backend .`
+- Docker run: `docker run -p 8000:8000 financeagents-backend`
 
 ### Testing
 - Run tests: `pytest` (pytest is included in requirements.txt)

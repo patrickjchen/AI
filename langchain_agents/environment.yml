@@ -1,4 +1,4 @@
-name: bankerai
+name: financeagents 
 channels:
   - conda-forge
   - defaults

@@ -1,8 +1,8 @@
-# BankerAI Workflow Migration Guide
+# FinanceAgents Workflow Migration Guide
 
 ## 🎯 Overview
 
-BankerAI has been upgraded from a router-based architecture to a **LlamaIndex Workflow** system. This provides better orchestration, parallel execution, and more robust error handling.
+FinanceAgents has been upgraded from a router-based architecture to a **LlamaIndex Workflow** system. This provides better orchestration, parallel execution, and more robust error handling.
 
 ## 🏗️ Architecture Changes
 
@@ -76,7 +76,7 @@ python main.py
 ## 📋 File Changes
 
 ### **New Files:**
-- `bankerai_workflow.py` - Main workflow implementation
+- `financeagents_workflow.py` - Main workflow implementation
 - `test_workflow.py` - Comprehensive workflow tests
 - `yahoo_agent_enhanced.py` - Enhanced Yahoo agent with CSV capabilities
 - `WORKFLOW_MIGRATION.md` - This migration guide
@@ -86,24 +86,24 @@ python main.py
 - `requirements.txt` - Added workflow dependencies
 
 ### **Legacy Files (can be removed):**
-- `router.py` - Replaced by `bankerai_workflow.py`
+- `router.py` - Replaced by `financeagents_workflow.py`
 - `yahoo_agent.py` - Replaced by `yahoo_agent_enhanced.py`
 
 ## 🔧 Usage Examples
 
 ### **Basic Query:**
 ```python
-from bankerai_workflow import run_bankerai_analysis
+from financeagents_workflow import run_financeagents_analysis
 
-result = await run_bankerai_analysis("What's Apple's stock performance?")
+result = await run_financeagents_analysis("What's Apple's stock performance?")
 print(result['results']['FinalSummary']['summary'])
 ```
 
 ### **Advanced Usage:**
 ```python
-from bankerai_workflow import BankerAIWorkflow
+from financeagents_workflow import FinanceAgentsWorkflow
 
-workflow = BankerAIWorkflow(timeout=300, verbose=True)
+workflow = FinanceAgentsWorkflow(timeout=300, verbose=True)
 result = await workflow.run(user_query="Compare Tesla and Ford stocks")
 ```
 
@@ -174,7 +174,7 @@ result = await workflow.run(user_query="Compare Tesla and Ford stocks")
 
 ### **Debug Mode:**
 ```python
-workflow = BankerAIWorkflow(timeout=600, verbose=True)
+workflow = FinanceAgentsWorkflow(timeout=600, verbose=True)
 ```
 
 ## 🔮 Future Enhancements
@@ -195,4 +195,4 @@ For issues or questions:
 
 ## 🎉 Migration Complete!
 
-Your BankerAI system is now powered by LlamaIndex Workflow for better performance, reliability, and maintainability. The comprehensive final summary ensures users get both detailed agent responses and a cohesive investment analysis.
+Your FinanceAgents system is now powered by LlamaIndex Workflow for better performance, reliability, and maintainability. The comprehensive final summary ensures users get both detailed agent responses and a cohesive investment analysis.

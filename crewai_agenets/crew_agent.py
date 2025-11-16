@@ -88,7 +88,7 @@ def build_tasks(mcp_request: MCPRequest):
 
 # Main CrewAI runner that returns MCPResponse
 def build_crew():
-    return Crew(name="BankerAI Crew", agents=[finance_agent, general_agent, yahoo_agent, sec_agent, reddit_agent], tasks=[])
+    return Crew(name="FinanceAgents Crew", agents=[finance_agent, general_agent, yahoo_agent, sec_agent, reddit_agent], tasks=[])
 
 def run_crew(mcp_request: MCPRequest) -> MCPResponse:
     crew = build_crew()

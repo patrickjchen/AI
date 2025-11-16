@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# BankerAI LlamaIndex Environment Setup Script
+# FinanceAgents LlamaIndex Environment Setup Script
 
-echo "Setting up BankerAI LlamaIndex environment..."
+echo "Setting up FinanceAgents LlamaIndex environment..."
 echo "=============================================="
 
 # Create virtual environment if it doesn't exist

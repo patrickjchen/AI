@@ -89,9 +89,9 @@ class GeneralAgent:
         return any(keyword in query_lower for keyword in finance_keywords)
 
     def get_system_info(self) -> Dict[str, Any]:
-        """Get information about the BankerAI system"""
+        """Get information about the FinanceAgents system"""
         return {
-            "system": "BankerAI",
+            "system": "FinanceAgents",
             "version": "2.0 - LlamaIndex Implementation",
             "description": "AI-powered financial analysis system",
             "available_agents": [

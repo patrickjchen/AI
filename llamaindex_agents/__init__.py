@@ -1,1 +1,1 @@
-# LlamaIndex implementation of BankerAI agents
+# LlamaIndex implementation of FinanceAgents agents

@@ -20,11 +20,11 @@ import json
 from agents.router import router
 
 app = FastAPI(
-    title="BankerAI API",
+    title="FinanceAgents API",
     description="The APIs that accept the user's query and respond the answer.",
     version="0.0.1",
     contact={
-        "name": "BankerAI",
+        "name": "FinanceAgents",
         "url": "https://localhost:8000",
     },
 )

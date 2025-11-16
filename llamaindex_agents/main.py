@@ -13,17 +13,17 @@ from fastapi.middleware.cors import CORSMiddleware
 import openai
 import json
 
-# Import BankerAI Workflow and schemas
-from bankerai_workflow import run_bankerai_analysis
+# Import FinanceAgents Workflow and schemas
+from financeagents_workflow import run_financeagents_analysis
 from schemas import MCPRequest, MCPContext
 from monitor import MonitorAgent
 
 app = FastAPI(
-    title="BankerAI API - Workflow Implementation",
+    title="FinanceAgents API - Workflow Implementation",
     description="AI-powered financial analysis using LlamaIndex Workflow framework",
     version="3.0.0",
     contact={
-        "name": "BankerAI",
+        "name": "FinanceAgents",
         "url": "https://localhost:8001",
     },
 )
@@ -195,24 +195,24 @@ async def improve_agent_response(agent: str, content: str) -> str:
         return content
 
 async def get_query_response(query: str) -> dict:
-    """Process query through BankerAI Workflow"""
+    """Process query through FinanceAgents Workflow"""
     try:
         start_time = datetime.now()
 
         print(f"\n{'='*60}")
-        print(f"🚀 Starting BankerAI Workflow Analysis")
+        print(f"🚀 Starting FinanceAgents Workflow Analysis")
         print(f"📝 Query: {query}")
         print(f"🕐 Start Time: {start_time.strftime('%H:%M:%S')}")
         print(f"{'='*60}")
 
         # Execute the workflow
-        workflow_result = await run_bankerai_analysis(query, timeout=300)
+        workflow_result = await run_financeagents_analysis(query, timeout=300)
 
         end_time = datetime.now()
         total_time = (end_time - start_time).total_seconds()
 
         print(f"\n{'='*60}")
-        print(f"🎯 BankerAI Workflow Results")
+        print(f"🎯 FinanceAgents Workflow Results")
         print(f"⏱️ Total Execution Time: {total_time:.2f} seconds")
         print(f"📊 Status: {workflow_result.get('status', 'unknown')}")
         print(f"{'='*60}\n")
@@ -222,19 +222,19 @@ async def get_query_response(query: str) -> dict:
             results = workflow_result.get("results", {})
 
             # Log successful completion
-            monitor.log_health("BankerAIWorkflow", "SUCCESS",
+            monitor.log_health("FinanceAgentsWorkflow", "SUCCESS",
                              f"Query processed in {total_time:.2f}s with {len(results)} results")
 
             return results if results else {"error": "No valid responses processed"}
 
         elif workflow_result.get("status") == "timeout":
             error_msg = workflow_result.get("error", "Workflow timeout")
-            monitor.log_error("BankerAIWorkflow", f"Timeout: {error_msg}")
+            monitor.log_error("FinanceAgentsWorkflow", f"Timeout: {error_msg}")
             return {"error": error_msg}
 
         else:
             error_msg = workflow_result.get("error", "Unknown workflow error")
-            monitor.log_error("BankerAIWorkflow", f"Workflow failed: {error_msg}")
+            monitor.log_error("FinanceAgentsWorkflow", f"Workflow failed: {error_msg}")
             return {"error": error_msg}
 
     except Exception as e:
@@ -245,7 +245,7 @@ async def get_query_response(query: str) -> dict:
             f.write(error_msg + "\n")
 
         print(f"❌ {error_msg}")
-        monitor.log_error("BankerAIWorkflow", f"Execution exception: {e}")
+        monitor.log_error("FinanceAgentsWorkflow", f"Execution exception: {e}")
 
         return {"error": str(e)}
 
@@ -276,7 +276,7 @@ async def cli_query_loop():
     """Interactive CLI loop for testing"""
 
     print("\n" + "="*60)
-    print("BankerAI - Workflow Implementation")
+    print("FinanceAgents - Workflow Implementation")
     print("Interactive CLI Started - Powered by LlamaIndex Workflow")
     print("="*60 + "\n")
 
@@ -359,5 +359,5 @@ if __name__ == "__main__":
     # Set environment variables for TensorFlow to reduce warnings
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-    print("Starting BankerAI - LlamaIndex Implementation...")
+    print("Starting FinanceAgents - LlamaIndex Implementation...")
     asyncio.run(main())

@@ -52,10 +52,10 @@ def test_workflow_initialization():
     print("\n🔧 Testing workflow initialization...")
 
     try:
-        from bankerai_workflow import BankerAIWorkflow
+        from financeagents_workflow import FinanceAgentsWorkflow
 
         print("  Creating workflow instance...")
-        workflow = BankerAIWorkflow(timeout=60)
+        workflow = FinanceAgentsWorkflow(timeout=60)
 
         print(f"  ✅ Workflow created successfully")
         print(f"  🤖 Available agents: {list(workflow.agent_instances.keys())}")
@@ -74,9 +74,9 @@ def test_basic_functionality():
     print("\n⚡ Testing basic functionality...")
 
     try:
-        from bankerai_workflow import BankerAIWorkflow
+        from financeagents_workflow import FinanceAgentsWorkflow
 
-        workflow = BankerAIWorkflow(timeout=60)
+        workflow = FinanceAgentsWorkflow(timeout=60)
 
         # Test query analysis
         test_query = "What's Apple's stock performance?"
@@ -109,7 +109,7 @@ def test_basic_functionality():
 
 def main():
     """Main debug function"""
-    print("🐛 BankerAI Agent Debug Suite")
+    print("🐛 FinanceAgents Agent Debug Suite")
     print("=" * 50)
 
     # Test 1: Individual imports

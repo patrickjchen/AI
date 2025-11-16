@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script for BankerAI Workflow Implementation
+Test script for FinanceAgents Workflow Implementation
 
 This script demonstrates the new workflow-based architecture and
 compares it with the previous router-based approach.
@@ -16,7 +16,7 @@ from datetime import datetime
 # Add the current directory to Python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from bankerai_workflow import run_bankerai_analysis, BankerAIWorkflow
+from financeagents_workflow import run_financeagents_analysis, FinanceAgentsWorkflow
 
 def print_banner(title: str, char: str = "=", width: int = 70):
     """Print a formatted banner"""
@@ -30,7 +30,7 @@ async def test_workflow_functionality():
 
     try:
         # Test workflow initialization
-        workflow = BankerAIWorkflow(timeout=60, verbose=True)
+        workflow = FinanceAgentsWorkflow(timeout=60, verbose=True)
         print("✅ Workflow initialization successful")
 
         # Test query analysis
@@ -65,7 +65,7 @@ async def test_single_query(query: str, expected_agents: list = None):
     start_time = time.time()
 
     try:
-        result = await run_bankerai_analysis(query, timeout=120)
+        result = await run_financeagents_analysis(query, timeout=120)
         execution_time = time.time() - start_time
 
         print(f"⏱️  Execution time: {execution_time:.2f} seconds")
@@ -190,7 +190,7 @@ async def test_workflow_performance():
         print(f"Query: {query}")
 
         start_time = time.time()
-        result = await run_bankerai_analysis(query, timeout=60)
+        result = await run_financeagents_analysis(query, timeout=60)
         execution_time = time.time() - start_time
 
         total_time += execution_time
@@ -259,7 +259,7 @@ async def compare_with_router():
 
 async def main():
     """Main test function"""
-    print_banner("🧪 BankerAI Workflow Test Suite", "=", 80)
+    print_banner("🧪 FinanceAgents Workflow Test Suite", "=", 80)
     print(f"🕐 Test started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     try:

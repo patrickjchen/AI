@@ -14,7 +14,7 @@ class SECAgent:
         self.llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1)
         self.sec_api_base = "https://data.sec.gov/api/xbrl"
         self.headers = {
-            "User-Agent": "BankerAI SEC Agent contact@example.com"  # SEC requires identification
+            "User-Agent": "FinanceAgents SEC Agent contact@example.com"  # SEC requires identification
         }
 
         # Common company CIK mappings

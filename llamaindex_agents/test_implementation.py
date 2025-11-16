@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple test script for LlamaIndex BankerAI implementation
+Simple test script for LlamaIndex FinanceAgents implementation
 """
 
 import asyncio
@@ -157,7 +157,7 @@ def check_environment():
 
 async def main():
     """Main test function"""
-    print("BankerAI LlamaIndex Implementation Test")
+    print("FinanceAgents LlamaIndex Implementation Test")
     print("=" * 45)
     print(f"Test started at: {datetime.now().isoformat()}")
 
